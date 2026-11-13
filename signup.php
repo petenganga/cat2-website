@@ -18,23 +18,26 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Sign Up</title>
-    <style>
-        body { font-family: Arial, sans-serif; background: #f0f2f5; display: flex; justify-content: center; padding-top: 60px; }
-        form { background: #fff; padding: 30px; border-radius: 8px; width: 300px; box-shadow: 0 2px 8px rgba(0,0,0,0.15); }
-        input { width: 100%; padding: 8px; margin: 8px 0; box-sizing: border-box; }
-        button { width: 100%; padding: 10px; background: #2d6cdf; color: #fff; border: none; border-radius: 4px; }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sign Up | CAT2 Portal</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form method="POST">
-        <h2>CAT2 Sign Up - Pete</h2>
-        <input type="text" name="username" placeholder="Username" required>
-        <input type="email" name="email" placeholder="Email" required>
-        <input type="password" name="password" placeholder="Password" required>
-        <button type="submit">Register</button>
-        <p><?php echo $msg; ?></p>
-        <p><a href="login.php">Already have an account? Log in</a></p>
-    </form>
+    <div class="card">
+        <div class="brand">CAT2 Portal</div>
+        <div class="subtitle">Create your account</div>
+        <form method="POST">
+            <label>Username</label>
+            <input type="text" name="username" required>
+            <label>Email</label>
+            <input type="email" name="email" required>
+            <label>Password</label>
+            <input type="password" name="password" required>
+            <button type="submit">Register</button>
+        </form>
+        <div class="msg"><?php echo $msg; ?></div>
+        <div class="link">Already have an account? <a href="login.php">Log in</a> | <a href="feedback.php">Feedback</a></div>
+    </div>
 </body>
 </html>
